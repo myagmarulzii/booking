@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customer Booking System UI</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#">BookFlow</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#booking-flow">Booking Flow</a></li>
+            <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+            <li class="nav-item"><a class="btn btn-light btn-sm ms-lg-2" href="#book-now">Book Now</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-section py-5">
+      <div class="container py-lg-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="badge text-bg-info mb-3">Mobile-first booking experience</span>
+            <h1 class="display-5 fw-bold mb-3">Customer Booking System</h1>
+            <p class="lead text-secondary mb-4">
+              Reduce manual calls, improve customer convenience, and optimize staff schedules with real-time appointment booking.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="register.html" class="btn btn-primary btn-lg">Create Account</a>
+              <a href="#features" class="btn btn-outline-primary btn-lg">Explore Features</a>
+            </div>
+            <div class="row row-cols-2 row-cols-md-4 g-3 mt-4">
+              <div class="col">
+                <div class="metric-card p-3 text-center rounded-3 h-100">
+                  <h3 class="h5 mb-1">&lt;2s</h3>
+                  <small>Booking Confirm</small>
+                </div>
+              </div>
+              <div class="col">
+                <div class="metric-card p-3 text-center rounded-3 h-100">
+                  <h3 class="h5 mb-1">99.5%</h3>
+                  <small>Availability</small>
+                </div>
+              </div>
+              <div class="col">
+                <div class="metric-card p-3 text-center rounded-3 h-100">
+                  <h3 class="h5 mb-1">4 Steps</h3>
+                  <small>Simple Flow</small>
+                </div>
+              </div>
+              <div class="col">
+                <div class="metric-card p-3 text-center rounded-3 h-100">
+                  <h3 class="h5 mb-1">24h</h3>
+                  <small>Smart Reminder</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card shadow-lg border-0 rounded-4">
+              <div class="card-header bg-white border-0 pt-4 px-4">
+                <h2 class="h4 mb-1">Quick Booking</h2>
+                <p class="text-muted mb-0">Find and reserve an appointment in under a minute.</p>
+              </div>
+              <div class="card-body p-4" id="book-now">
+                <form class="row g-3">
+                  <div class="col-md-6">
+                    <label for="service" class="form-label">Service</label>
+                    <select id="service" class="form-select">
+                      <option>Consultation</option>
+                      <option>Haircut</option>
+                      <option>Wellness Session</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="staff" class="form-label">Staff (Optional)</label>
+                    <select id="staff" class="form-select">
+                      <option>Any Available</option>
+                      <option>Alex Tan</option>
+                      <option>Mia Lee</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="date" class="form-label">Date</label>
+                    <input id="date" type="date" class="form-control" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="time" class="form-label">Time Slot</label>
+                    <select id="time" class="form-select">
+                      <option>10:00 AM</option>
+                      <option>11:30 AM</option>
+                      <option>02:00 PM</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <button type="button" class="btn btn-primary w-100">Confirm Booking</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="features" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">Features by Role</h2>
+            <p class="text-secondary mb-0">Tailored experiences for customers, staff, and administrators.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                  <h3 class="h5">Customer Portal</h3>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-0">Registration & login</li>
+                    <li class="list-group-item px-0">Browse services & real-time slots</li>
+                    <li class="list-group-item px-0">Reschedule or cancel booking</li>
+                    <li class="list-group-item px-0">Booking history + notifications</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                  <h3 class="h5">Staff Workspace</h3>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-0">View assigned bookings</li>
+                    <li class="list-group-item px-0">Update booking status</li>
+                    <li class="list-group-item px-0">Manage hours, breaks, time off</li>
+                    <li class="list-group-item px-0">Set staff-specific services</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                  <h3 class="h5">Admin Console</h3>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-0">Service catalog & pricing</li>
+                    <li class="list-group-item px-0">Rules: buffer, cancellation, advance booking</li>
+                    <li class="list-group-item px-0">Revenue & utilization analytics</li>
+                    <li class="list-group-item px-0">CSV / Excel export</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="booking-flow" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="fw-bold text-center mb-4">4-Step Booking Flow</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+            <div class="col"><div class="p-4 rounded-4 bg-white shadow-sm h-100"><span class="step-chip">1</span><h3 class="h6 mt-3">Choose Service</h3><p class="text-muted small mb-0">Select service and preferred staff.</p></div></div>
+            <div class="col"><div class="p-4 rounded-4 bg-white shadow-sm h-100"><span class="step-chip">2</span><h3 class="h6 mt-3">Pick Time</h3><p class="text-muted small mb-0">See real-time availability instantly.</p></div></div>
+            <div class="col"><div class="p-4 rounded-4 bg-white shadow-sm h-100"><span class="step-chip">3</span><h3 class="h6 mt-3">Confirm</h3><p class="text-muted small mb-0">Lock slot with confirmation message.</p></div></div>
+            <div class="col"><div class="p-4 rounded-4 bg-white shadow-sm h-100"><span class="step-chip">4</span><h3 class="h6 mt-3">Get Reminders</h3><p class="text-muted small mb-0">Receive alerts by email, SMS, and app.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="py-5">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <h2 class="fw-bold">Admin Dashboard Snapshot</h2>
+              <p class="text-secondary">Track performance metrics and make data-driven decisions with daily, weekly, and monthly insights.</p>
+              <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle">
+                  <thead>
+                    <tr>
+                      <th>Metric</th>
+                      <th>Today</th>
+                      <th>This Week</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Total Bookings</td><td>124</td><td>782</td></tr>
+                    <tr><td>No-show Rate</td><td>4.2%</td><td>5.1%</td></tr>
+                    <tr><td>Staff Utilization</td><td>87%</td><td>81%</td></tr>
+                    <tr><td>Revenue</td><td>$3,420</td><td>$22,180</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                  <h3 class="h5">Roadmap & Integrations</h3>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge text-bg-primary">Google Calendar</span>
+                    <span class="badge text-bg-success">Payments</span>
+                    <span class="badge text-bg-warning">AI Optimization</span>
+                    <span class="badge text-bg-info">Multi-branch</span>
+                  </div>
+                  <div class="accordion" id="roadmapAccordion">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#phase1">Phase 1</button>
+                      </h2>
+                      <div id="phase1" class="accordion-collapse collapse show" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">Core booking, schedule management, notifications, and reports.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#phase2">Phase 2</button>
+                      </h2>
+                      <div id="phase2" class="accordion-collapse collapse" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">Payment integrations, invoice automation, and loyalty plans.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 border-top">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <small class="text-muted">© 2026 BookFlow. Built for scalable service bookings.</small>
+        <small class="text-muted">Designed with Bootstrap 5 components.</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
