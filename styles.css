@@ -1,0 +1,33 @@
+:root {
+  --brand-primary: #1e5eff;
+  --bg-soft: #f3f7ff;
+}
+
+body {
+  background: #fff;
+}
+
+.hero-section {
+  background: linear-gradient(180deg, var(--bg-soft), #ffffff 65%);
+}
+
+.metric-card {
+  background: #fff;
+  border: 1px solid #e5ecff;
+}
+
+.step-chip {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--brand-primary);
+}
+
+.list-group-item {
+  border-color: #eef1f7;
+}
